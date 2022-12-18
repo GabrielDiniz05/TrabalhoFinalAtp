@@ -1,0 +1,15 @@
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\bin\Debug\net6.0\Trabalho-ATP.exe
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\bin\Debug\net6.0\Trabalho-ATP.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\bin\Debug\net6.0\Trabalho-ATP.runtimeconfig.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\bin\Debug\net6.0\Trabalho-ATP.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\bin\Debug\net6.0\Trabalho-ATP.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\refint\Trabalho-ATP.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\Trabalho-ATP.genruntimeconfig.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Sistemas da Informação\Algoritmos\Trabalho\Trabalho-ATP\obj\Debug\net6.0\ref\Trabalho-ATP.dll
