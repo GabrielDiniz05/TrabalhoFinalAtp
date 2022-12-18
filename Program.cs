@@ -26,6 +26,27 @@ class Program{
         return produtos;
     }
 
+    public static void gerarArqVenda(string[,] registroMesVenda){
+        StreamWriter sw = new StreamWriter(@".\relatorio_vendas.txt");
+
+        int pA = 0, pB = 0, pC = 0, pD = 0;
+
+        for(int i = 0; i < 30; i++){
+            for(int j = 0; j < 4; j++){
+                pA+=Convert.ToInt32(registroMesVenda[i,0]);
+                pB+=Convert.ToInt32(registroMesVenda[i,1]);
+                pC+=Convert.ToInt32(registroMesVenda[i,2]);
+                pD+=Convert.ToInt32(registroMesVenda[i,3]);
+            }
+        }
+
+        sw.WriteLine("ProdutoA: " + pA + 
+                     "\nProdutoB: " + pB +
+                     "\nProdutoC: " + pC +
+                     "\nProdutoD: " + pD);
+        sw.Close();
+    }
+
     public static void relatorioEstoque(string[] produtos){
         Console.WriteLine("/======= Relatório =======\\");
         for(int i = 0; i < produtos.Length; i++){
@@ -34,21 +55,55 @@ class Program{
         Console.WriteLine("\\========================/");
     }
 
+    public static void preencherRegMesVenda(string[] produtos, string[,] registroMesVenda){
+        Random rdm = new Random();
+
+        int pA = 0, pB = 0, pC = 0, pD = 0;
+
+        for(int i = 0; i < 30; i++){
+            for(int j = 0; j < produtos.Length; j++){
+                registroMesVenda[i,j] = Convert.ToString(rdm.Next(0,10));
+            }
+        }       
+    }
+
+    public static void relatorioVenda(string[,] registroMesVenda){
+        Console.WriteLine("       ProdutoA - ProdutoB - ProdutoC - ProdutoD");
+        for(int i = 0; i < 30; i++){
+            Console.Write("\nDia " + i + ": ");
+            for(int j = 0; j < 4; j++){
+                Console.Write("   " + registroMesVenda[i,j] + "       ");
+            }
+        }
+    }
+
     public static void menuPrincipal(){
-        Console.WriteLine("1 - [Importar arquivo de produtos]");
-        Console.WriteLine("2 - [Registrar venda]");
-        Console.WriteLine("3 - [Relatório de vendas]");
-        Console.WriteLine("4 - [Relatório de estoque]");
-        Console.WriteLine("5 - [Criar arquivo de vendas]");
-        Console.WriteLine("6 - [Sair]");
+        Console.WriteLine("1 - [Registrar venda]");
+        Console.WriteLine("2 - [Relatório de vendas]");
+        Console.WriteLine("3 - [Relatório de estoque]");
+        Console.WriteLine("4 - [Criar arquivo de vendas]");
+        Console.WriteLine("5 - [Sair]");
+    }
+
+    public static void espacamento(){
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine();
     }
 
     public static void Main(string[] args){
 
         string caminho = @".\produtos.txt";
-        
+
         bool run = true;
         int escolha = 0;
+
+        string[,] registroMesVenda = new string[30,4];
+
+        preencherRegMesVenda(lerArq(caminho), registroMesVenda);
 
         Console.WriteLine("==============================");
         Console.WriteLine("          Bem-Vindo(a)        ");
@@ -57,11 +112,11 @@ class Program{
         while(run){
             menuPrincipal();
             escolha = int.Parse(Console.ReadLine());
-            switch(escolha){
+            switch(escolha){    
                 case 1:
                     // string esc = "";
 
-                    // relatorioProdutos(lerArq(caminho));
+                    // gerarArqVenda(registroMesVenda);
                     // Console.WriteLine("Deseja voltar para o menu? (s/n)");
                     
                     // esc = Console.ReadLine();
@@ -71,33 +126,35 @@ class Program{
                     return;
                 
                 case 2:
-                    // string esc = "";
+                    string esc3 = "";
 
-                    // relatorioProdutos(lerArq(caminho));
-                    // Console.WriteLine("Deseja voltar para o menu? (s/n)");
+                    espacamento();
+                    relatorioVenda(registroMesVenda);
+                    Console.WriteLine("\nDeseja voltar para o menu? (s/n)");
                     
-                    // esc = Console.ReadLine();
-                    // if(esc.ToLower() == "s"){
-                    //     break;
-                    // }
+                    esc3 = Console.ReadLine();
+                    if(esc3.ToLower() == "s"){
+                        break;
+                    }
                     return;
                 
                 case 3:
-                    // string esc = "";
+                    string esc4 = "";
 
-                    // relatorioProdutos(lerArq(caminho));
-                    // Console.WriteLine("Deseja voltar para o menu? (s/n)");
+                    espacamento();
+                    relatorioEstoque(lerArq(caminho));
+                    Console.WriteLine("Deseja voltar para o menu? (s/n)");
                     
-                    // esc = Console.ReadLine();
-                    // if(esc.ToLower() == "s"){
-                    //     break;
-                    // }
+                    esc4 = Console.ReadLine();
+                    if(esc4.ToLower() == "s"){
+                        break;
+                    }
                     return;
                 
                 case 4:
                     string esc = "";
 
-                    relatorioEstoque(lerArq(caminho));
+                    gerarArqVenda(registroMesVenda);
                     Console.WriteLine("Deseja voltar para o menu? (s/n)");
                     
                     esc = Console.ReadLine();
@@ -107,18 +164,6 @@ class Program{
                     return;
                 
                 case 5:
-                    // string esc = "";
-
-                    // relatorioProdutos(lerArq(caminho));
-                    // Console.WriteLine("Deseja voltar para o menu? (s/n)");
-                    
-                    // esc = Console.ReadLine();
-                    // if(esc.ToLower() == "s"){
-                    //     break;
-                    // }
-                    return;
-                
-                case 6:
                     Console.WriteLine("Obrigado por utilizar a nossa aplicação! Volte sempre!");
                     run = false;
                     break;

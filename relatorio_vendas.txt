@@ -1,0 +1,4 @@
+ProdutoA: 376
+ProdutoB: 336
+ProdutoC: 484
+ProdutoD: 560
